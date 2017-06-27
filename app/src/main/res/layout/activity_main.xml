@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainview"
+    tools:context="com.suypower.stereo.videomonitor.MainActivity">
+
+
+
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/menu_selector"
+        android:layout_gravity="start"
+        android:layout_marginLeft="10dp"
+        android:src="@color/blackTransparent6"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:id="@+id/btnmenu"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="@color/blackTransparent6"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/record_state"
+            android:background="@drawable/state"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp" />
+        <LinearLayout
+
+            android:id="@+id/analysis"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ProgressBar
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                style="@android:style/Widget.Holo.ProgressBar.Small"
+                />
+
+            <TextView
+                android:id="@+id/analysis_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在处理"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="00:00"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="18dp"
+            android:id="@+id/record_time"
+
+            />
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
